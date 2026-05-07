@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI热选 - AI自动挑选的高价值内容，聚合AI领域的热点资讯">
+  <title>AI 热选 - AI热点精选聚合</title>
+  
+  <!-- 样式表 -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- ==================== 头部区域 ==================== -->
+  <header class="header">
+    <div class="header-content">
+      <!-- Logo -->
+      <div class="logo-section">
+        <div class="logo">
+          <div class="logo-icon">🔥</div>
+          <div>
+            <h1 class="logo-text">AI 热选</h1>
+            <p class="logo-subtitle">AI 自动挑选的高价值内容</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 日期导航 -->
+      <nav class="date-nav">
+        <button class="date-btn" id="datePrevBtn" title="前一天">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <span class="date-display" id="dateDisplay">加载中...</span>
+        <button class="date-btn" id="dateNextBtn" title="后一天">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </nav>
+      
+      <!-- 日期点指示器 -->
+      <div class="date-dots" id="dateDots"></div>
+      
+      <!-- 搜索框 -->
+      <div class="search-section">
+        <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input 
+          type="text" 
+          class="search-input" 
+          id="searchInput" 
+          placeholder="搜索标题、摘要、来源... (Ctrl+K)"
+        >
+      </div>
+      
+      <!-- 标签筛选 -->
+      <div class="tags-section" id="tagsContainer">
+        <!-- 动态生成 -->
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== 主内容区域 ==================== -->
+  <main class="main-content">
+    <!-- 统计栏 -->
+    <div class="stats-bar" id="statsBar">
+      <!-- 动态生成 -->
+    </div>
+    
+    <!-- 新闻列表 -->
+    <div class="timeline" id="newsContainer">
+      <!-- 加载中 -->
+      <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== 底部 ==================== -->
+  <footer class="footer">
+    <p>
+      <span>🔥 AI 热选</span> · 
+      数据来源：Twitter/X · RSS · 博客 ·
+      <a href="https://x.com" target="_blank" rel="noopener">投稿入口</a>
+    </p>
+    <p style="margin-top: 8px; opacity: 0.6;">
+      按 Esc 清空筛选 · ← → 键切换日期
+    </p>
+  </footer>
+
+  <!-- ==================== 回到顶部按钮 ==================== -->
+  <button class="back-to-top" id="backToTop" title="回到顶部">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- 数据（内嵌，支持本地file://打开） -->
+  <script src="./data.js"></script>
+  <!-- 脚本 -->
+  <script src="./script.js"></script>
+</body>
+</html>
